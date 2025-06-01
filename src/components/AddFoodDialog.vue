@@ -258,12 +258,12 @@ async function handleVoiceInput() {
 
   mediaRecorder.value.ondataavailable = e => chunks.push(e.data)
   mediaRecorder.value.onstop = async () => {
-    const blob = new Blob(chunks, { type: 'audio/webm' })
+    const blob = new Blob(chunks);
 
 
-    const file = new File([blob], 'recording.webm', { type: 'audio/webm' })
+    const file = new File([blob], 'recording', { type: blob.type });
 
-    console.log('🎤 上传的 file', file, file.size, file.type)
+    console.log('🎤 Uploaded file', file, file.size, file.type)
     startParsing()
     try {
       const parsed = await parseFoodAudio(file)
