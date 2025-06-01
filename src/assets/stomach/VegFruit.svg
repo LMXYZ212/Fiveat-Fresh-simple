@@ -1,0 +1,31 @@
+<svg viewBox="0 0 150 150" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <path
+   id="vegfruit-area"  
+    d="
+      M73.337 30.557
+      L67.963 32.347
+      L64.443 36.631
+      L63 42.081
+      L63.354 47.658
+      L68.505 69.542
+      L92.4129 76.154
+      L129.104 70.774
+      L128.477 60.177
+      L125.699 49.907
+      L120.95 40.348
+      L113.626 32.692
+      L109.373 29.502
+      L104.593 27.183
+      L99.4019 26.018
+      L94.093 26
+      L73.337 30.557
+      Z
+    "
+    fill="#000000"
+    fill-opacity="0.01"
+    stroke="#F4A300"
+    stroke-width="0.25"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
