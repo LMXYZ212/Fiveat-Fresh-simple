@@ -80,7 +80,7 @@
           class="w-full border rounded-lg p-3 focus:outline-none focus:ring" />
         <button @click="handleSubmit" :disabled="loading" class="w-full py-3 rounded-lg bg-primary text-white
                  disabled:opacity-50 active:scale-95 transition">
-          {{ loading ? '解析中…' : '添加' }}
+          {{ loading ? 'Analyzing…' : 'Add' }}
         </button>
 
         <!-- ✨ 新增 “解析” 按钮 ✨ -->
@@ -218,6 +218,7 @@ let   cancelTimer: any = null    // 保存 setTimeout 句柄
 
 
 
+
 function startParsing() {
   parseLoading.value  = true
   showCancelBtn.value = false
@@ -313,7 +314,7 @@ async function handleParse() {
   try {
     candidates.value = await parseFoodTextLite(text)   // 调新接口
   } catch (e) {
-    console.error('text-parse 失败', e)
+    console.error('text-parse failed', e)
   } finally {
     loading.value = false
     stopParsing() 
@@ -367,11 +368,11 @@ async function confirmOne(idx: number) {
       candidates.value.splice(idx, 1)
       if (!candidates.value.length) exitInput()
     } else {
-      alert('NEVO 未匹配，请修改名称后重试')
+      alert('NEVO did not match, please modify the name and try again')
     }
   } catch (e) {
-    console.error('confirm 错误', e)
-    alert('提交确认失败，请稍后再试')
+    console.error('confirm error', e)
+    alert('Submission confirmation failed, please try again later')
   }
 }
 
@@ -468,7 +469,7 @@ async function addQuick(food) {
     'Croissant': 95,
     'Coffee': 200,
     'Beef Fat': 10,
-    'Grilled Chicken': 150
+    'Grilled Chicken': 150  
   }
 
   const qty = defaultQtyMap[food.name] || 10
@@ -480,7 +481,7 @@ async function addQuick(food) {
     exitInput()
   } catch (e) {
     console.error('Quick Add 失败', e)
-    alert('Quick Add 失败，请稍后重试')
+    alert('Quick Add failed, try again later')
   }
 }
 /* ------------------------------------------------------------------ */

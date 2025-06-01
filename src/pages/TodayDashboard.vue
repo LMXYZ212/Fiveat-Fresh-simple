@@ -57,7 +57,7 @@ import AddFoodDialog from '@/components/AddFoodDialog.vue'
 import { useIntake } from '@/composables/useIntake'
 
 /* 日期 */
-const todayStr = new Date().toLocaleDateString(undefined, {
+const todayStr = new Date().toLocaleDateString('en-US', {
   month: 'short', day: 'numeric', year: 'numeric'
 })
 
