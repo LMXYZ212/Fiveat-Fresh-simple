@@ -19,7 +19,7 @@
         <div class="w-12 h-1.5 bg-gray-300 rounded-full mx-auto" />
 
         <h3 class="text-lg font-semibold text-center">
-          Which meal you wat to add？
+          Which meal you want to add？
         </h3>
 
         <!-- 四宫格按钮 -->
