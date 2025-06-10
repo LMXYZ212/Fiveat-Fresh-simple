@@ -321,26 +321,7 @@ async function handleParse() {
   }
 }
 
-// async function confirmOne(idx: number) {
-//   const item = candidates.value[idx]
-//   try {
-//     const { data } = await axios.post('/api/confirm', [item])
-//     const ok = (data.parsedItems ?? data.foodItems)?.[0]
-//     if (ok?.NEVO_matched) {
-//       const group = normalizeGroup(ok.WheelGroup)
-//       add({ ...ok, WheelGroup: group, MealType: selectedMeal.value })
-//       candidates.value.splice(idx, 1)        // 移除已确认
-//       if (!candidates.value.length) exitInput()
-//     } else {
-//       alert('NEVO 未匹配，请修改名称后重试')
-//     }
-//   } catch (e) {
-//     console.error('confirm 错误', e)
-//   }
-// }
-/* ------------------------------------------------------------------ */
-/* ① 基础配置：自动判断本地 / 线上后端地址                             */
-/* ------------------------------------------------------------------ */
+
 const BASE_URL =
   window.location.hostname === 'localhost'
     ? 'http://localhost:8888'                            // 本地 FastAPI 端口
